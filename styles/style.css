@@ -247,6 +247,11 @@ video {
         font-size: 3vw;
     }
 
+    .flowers {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 .top-right-decoration {
