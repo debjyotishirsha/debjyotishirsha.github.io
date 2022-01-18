@@ -2,7 +2,7 @@ particlesJS.load('particles-js', '/assets/particlesjs-config.json', function () 
     console.log('')
 });
 
-var countDownDate = new Date("January 28, 2022 21:30:00").getTime();
+var countDownDate = new Date("January 28, 2022 18:30:00").getTime();
 
 var x = setInterval(function() {
 
