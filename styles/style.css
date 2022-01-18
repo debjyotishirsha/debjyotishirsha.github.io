@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=The+Nautigal:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+video {
+    object-fit: fill;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    background-color: #FFF;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.home-page, .message-page, .count-page{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+}
+
+.flowers {
+    width: 200px;
+    height: 200px;
+}
+
+.title {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-family: 'The Nautigal', cursive;
+    padding: 10px;
+    font-size: 8vw;
+    color: #F44336 ;
+    z-index: 10;
+    /* text-shadow: 2px 2px #FFCA28; */
+}
+
+.and {
+    font-family: 'Imperial Script', cursive;
+    font-size: 12vw;
+    margin: -20px;
+    color: gold;
+    z-index: 5;
+}
+
+.header-info {
+    font-family: 'Imperial Script', cursive;
+    font-size: 6vw;
+    padding: 10px;
+}
+
+.date-info {
+    font-family: 'Imperial Script', cursive;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #F44336;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 200px 0px 200px;
+}
+
+.message {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Imperial Script', cursive;
+    font-size: 2vw;
+    line-height: 1.5;
+}
+
+.thank-you{
+    text-align: center;
+    font-family: 'Imperial Script', cursive;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.counter-title {
+    font-family: 'Imperial Script', cursive;
+    font-size: 6vw;
+    padding: 15px;
+}
+
+#days, #hours, #minutes, #seconds, #date-text {
+    font-family: 'Imperial Script', cursive;
+    font-size: 2vw;
+    padding: 5px;
+    padding-bottom: 80px;
+}
+
+.clock-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+#final-message{
+    padding: 30px;
+    font-size: 6vw;
+    font-family: 'Imperial Script', cursive;
+}
+
+@media (max-width: 720px) {
+    .title {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 18vw;
+    }
+
+    .and {
+        font-size: 12vw;
+        padding: 5px;
+    }
+
+    .header-info {
+        font-size: 8vw;
+    }
+
+    .date-info {
+        font-size: 6vw;
+    }
+
+    .card {
+        margin: 0px 50px 0px 50px;
+    }
+    
+    .message {
+        padding: 30px;
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+    
+    .thank-you{
+        font-size: 4vw;
+        padding: 10px;
+    }
+
+    .counter-title, #days, #hours, #minutes, #seconds  {
+        font-size: 2vw;
+    }
+
+}
+
+.top-right-decoration {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+    max-width: 400px;
+	width:40%;
+}
+
+.top-left-decoration {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+    max-width: 400px;
+	width:40%;
+}

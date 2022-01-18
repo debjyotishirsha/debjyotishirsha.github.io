@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Debjyoti & Shirsha's Wedding</title>
+</head>
+
+<body>
+    <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
+    <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+    <div id="particles-js"></div>
+    <div class="wrapper">
+        <div class="home-page">
+            <div class="title">
+                <h1 class="name">Debjyoti</h1>
+                <h1 class="and">&</h1>
+                <h1 class="name">Shirsha</h1>
+            </div>
+            <img class="flowers" src="/assets/yellow-flowers.png">
+            <p class="header-info">Tying the knot on</p>
+            <p class="date-info"><datetime>24th January 2022</datetime></p>
+            <!-- <div class="clock-grid">
+                <p id="date-text">in </p>
+                <p id="days"></p>
+                <p id="hours"></p>
+                <p id="minutes"></p>
+                <p id="seconds"></p>
+            </div> -->
+        </div>
+		<div class="message-page" style="opacity:0.9;">
+			<div class="card">
+				<p class="message" style="opacity:0.9;">
+					With the grace of God, as </p><p class="name" style="font-size:4vw;"> Debjyoti </p> <p class="and" style="font-size:4vw"> &</p> <p class="name" style="font-size:3vw;">Shirsha</p> <p class="message"> join hands and take their marriage vows. It is with deep pleasure and a lot of gratitude that we invite you to their reception ceremony on</p><p class="date-info"><datetime>28th January 2022, 6:30 pm </datetime></p>
+
+			<div class="clock-grid">
+                <p id="date-text">in </p>
+                <p id="days"></p>
+                <p id="hours"></p>
+                <p id="minutes"></p>
+                <p id="seconds"></p>
+            </div>
+			<p class="message"> We expect your blessing more than anything. Let us all enjoy the holy occasion with your sweet presence. </p>
+			</div>
+		</div>
+        <div class="message-page">
+	    	<div class="card">
+	    		<video-radio-star class="demo-video center-div" data-visible-autoplay>
+	    		  <video style="border-radius:30px; outline:none; width:100%; display:flex; justify-content: center;" src="assets/invitation.mp4" muted loop controlsList="nodownload" playsinline disablePictureInPicture disableRemotePlayback>
+	    		  </video>
+	    		</video-radio-star>
+	    	</div>
+
+        </div>
+		<div class="message-page">
+            <div class="card">
+                <p class="message">
+			Venue:</p></br> <p class="message"  style="font-size:4vw;">Gokul Banquets </p></br> <a class="message" style="font-size:2vw;" href="https://goo.gl/maps/XyEXgBqQBBFs4UEL9" target="_blank">open in map</a><p class="message">441, Sreebhumi, Lake Town, Kolkata, West Bengal 700048 </p>
+                <!--<p class="message">Timings - 6:30 pm to 9:30 pm</p>-->
+            </div>
+
+        </div>
+
+
+
+
+        <div class="count-page">
+            <!-- <p id="clock-title" class="counter-title">Tieing knots in</p>
+            <div class="clock-grid">
+                <p id="days"></p>
+                <p id="hours"></p>
+                <p id="minutes"></p>
+                <p id="seconds"></p>
+            </div> -->
+            <p id="final-message"></p>
+            <img class="flowers" src="/assets/purple-flower.png">
+		    <p class="thank-you">🌹 Thank you 🌹</p>
+        </div>
+    </div>
+    </div>
+    <script src="/scripts/particles.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+    <script src="/scripts/prettyembed.js"></script>
+    <script src="/scripts/video-star.js"></script>
+		<script>
+		  // Load the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+		  tag.src = "https://www.youtube.com/player_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  // Replace the 'ytplayer' element with an <iframe> and
+		  // YouTube player after the API code downloads.
+		  var player;
+		  function onYouTubePlayerAPIReady() {
+			player = new YT.Player('ytplayer', {
+			  height: '360',
+			  width: '640',
+			  videoId: 'M7lc1UVf-VE'
+			});
+		  }
+		</script>
+	  </body>
+</html>
