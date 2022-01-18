@@ -19,7 +19,7 @@ var x = setInterval(function() {
   document.getElementById("days").innerHTML = days + "d ";
   document.getElementById("hours").innerHTML = hours + "h ";
   document.getElementById("minutes").innerHTML = minutes + "m "
-  document.getElementById("seconds").innerHTML = seconds + "s ";
+  document.getElementById("seconds").innerHTML = seconds + "s.";
 
 
   if (distance < 0) {
