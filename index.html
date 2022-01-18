@@ -15,6 +15,8 @@
 <body>
     <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+    <img src="/assets/music-transparent.png" alt="image-bottom-right" class="bottom-right-decoration"> 
+    
    <!--  <audio autoplay loop id="myaudio">
               <source src="/assets/audio.mp3" type="audio/mpeg">
    </audio>-->
@@ -64,11 +66,11 @@
         <a class="message" style="text-decoration:none;" href="https://www.youtube.com/watch?v=lJXd1WfvEas" target="_blank">Watch on Youtube</a>
 
         </div>
-		<div class="message-page">
+		<div class="message-page" style="opacity:0.8;">
             <div class="card">
                 <p class="venue"  style="color:#5436f4;">
 			Venue:</p></br> <p class="name-sm" style="color:#711d8b;">Gokul Banquets </p></br><p class="message">441, Sreebhumi, Lake Town, Kolkata, West Bengal, India, 700048 </p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.86105464888!2d88.4041147!3d22.5990947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd72bd046cad8314!2sGokul%20Banquets!5e0!3m2!1sen!2sin!4v1642489949506!5m2!1sen!2sin" width="97%" height="200" style="border:0;padding:15px;border-radius:30px;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.86105464888!2d88.4041147!3d22.5990947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd72bd046cad8314!2sGokul%20Banquets!5e0!3m2!1sen!2sin!4v1642489949506!5m2!1sen!2sin" width="97%" height="200" style="border:0;padding:15px;border-radius:30px;opacity:1.0;" allowfullscreen="" loading="lazy"></iframe>
       <a class="message" href="https://goo.gl/maps/XyEXgBqQBBFs4UEL9" target="_blank" style="text-decoration: none;">Open in maps.</a>
                 <!--<p class="message">Timings - 6:30 pm to 9:30 pm</p>-->
             </div>
@@ -87,7 +89,8 @@
                 <p id="seconds"></p>
             </div> -->
             <p id="final-message"></p>
-            <img class="flowers" src="/assets/purple-flower.png">
+            <!-- <img class="flowers" src="/assets/purple-flower.png"> -->
+            <img class="flowers" src="/assets/orchid_min.png">
 		    <p class="thank-you"> Thank you </p>
         <!-- <p class="thank-you">🌹 Thank you 🌹</p> -->
         </div>
@@ -108,27 +111,62 @@
       //     $("#myaudio").get(0).play();
       // });
 
+      function sleep (time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      }      
+
+      function play_audio(audio){
+        sleep(500).then(() => {
+          audio.muted = true;
+          var playPromise = audio.play();
+          if (playPromise !== undefined) {
+              playPromise.then(_ => {
+                // Automatic playback started!
+                // Show playing UI.
+            })
+            .catch(error => {
+              // Auto-play was prevented
+              // Show paused UI.      
+              console.log(error);
+            });
+          }
+          audio.muted = false;
+          playPromise = audio.play();
+          if (playPromise !== undefined) {
+              playPromise.then(_ => {
+                // Automatic playback started!
+                // Show playing UI.
+              })
+              .catch(error => {
+                // Auto-play was prevented
+                // Show paused UI.        
+                console.log(error);
+            });
+          }
+        });
+      }
+
+      $(document).ready(function() {          
+
         var audio = document.createElement("AUDIO")
         document.body.appendChild(audio);
         audio.src = "./assets/audio.m4a"
 
-        document.body.addEventListener("mousemove", function () {
-            var playPromise = audio.play();
-            
-              if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                  // Automatic playback started!
-                  // Show playing UI.
-                })
-                .catch(error => {
-                  // Auto-play was prevented
-                  // Show paused UI.
-        
-                  // audio.play()
-                });
-              }
-              audio.volume = 0.2;
-        })
+        document.body.addEventListener("mouseover", function () {            
+            if (audio.duration > 0 && !audio.paused) {
+            //Its playing...do your job
+            } else {
+              play_audio(audio);
+              audio.volume = 0.2;            
+            }            
+        });
+
+        // setTimeout(() => {
+        //   audio.pause()
+        //   audio.load()
+        // }, 10)
+
+      });
     </script>
 	  </body>
 </html>
