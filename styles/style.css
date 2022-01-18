@@ -106,7 +106,7 @@ video {
     padding: 20px;
     text-align: center;
     font-family: 'Imperial Script', cursive;
-    font-size: 2vw;
+    font-size: 3vw;
     line-height: 1.5;
 }
 
@@ -129,9 +129,9 @@ video {
 
 #days, #hours, #minutes, #seconds, #date-text {
     font-family: 'Imperial Script', cursive;
-    font-size: 2vw;
+    font-size: 3vw;
     padding: 5px;
-    padding-bottom: 80px;
+    padding-bottom: 5px;
 }
 
 .clock-grid{
@@ -186,7 +186,7 @@ video {
     }
 
     .counter-title, #days, #hours, #minutes, #seconds  {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
 }

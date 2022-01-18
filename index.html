@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Debjyoti & Shirsha's Wedding</title>
 </head>
 
 <body>
     <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+   <!--  <audio autoplay loop id="myaudio">
+              <source src="/assets/audio.mp3" type="audio/mpeg">
+   </audio>-->
+    <audio id="myaudio" src="/assets/audio.mp3" loop="loop"></audio>
     <div id="particles-js"></div>
     <div class="wrapper">
         <div class="home-page">
@@ -33,7 +41,7 @@
 		<div class="message-page" style="opacity:0.9;">
 			<div class="card">
 				<p class="message" style="opacity:0.9;">
-					With the grace of God, as </p><p class="name" style="font-size:4vw;"> Debjyoti </p> <p class="and" style="font-size:4vw"> &</p> <p class="name" style="font-size:3vw;">Shirsha</p> <p class="message"> join hands and take their marriage vows. It is with deep pleasure and a lot of gratitude that we invite you to their reception ceremony on</p><p class="date-info"><datetime>28th January 2022, 6:30 pm </datetime></p>
+					With the grace of God, as </p><p class="name" style="font-size:6vw; padding:20px;"> Debjyoti </p> <p class="and" style="font-size:4vw"> &</p> <p class="name" style="font-size:6vw;padding:20px;">Shirsha</p> <p class="message"> join hands and take their marriage vows. It is with deep pleasure and a lot of gratitude that we invite you to their reception ceremony on</p><p class="date-info"><datetime>28th January 2022, 6:30 pm </datetime></p>
 
 			<div class="clock-grid">
                 <p id="date-text">in </p>
@@ -90,21 +98,50 @@
     <script src="/scripts/video-star.js"></script>
 		<script>
 		  // Load the IFrame Player API code asynchronously.
-		  var tag = document.createElement('script');
-		  tag.src = "https://www.youtube.com/player_api";
-		  var firstScriptTag = document.getElementsByTagName('script')[0];
-		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		  // var tag = document.createElement('script');
+		  // tag.src = "https://www.youtube.com/player_api";
+		  // var firstScriptTag = document.getElementsByTagName('script')[0];
+		  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 		  // Replace the 'ytplayer' element with an <iframe> and
 		  // YouTube player after the API code downloads.
-		  var player;
-		  function onYouTubePlayerAPIReady() {
-			player = new YT.Player('ytplayer', {
-			  height: '360',
-			  width: '640',
-			  videoId: 'M7lc1UVf-VE'
-			});
-		  }
+		  // var player;
+		  // function onYouTubePlayerAPIReady() {
+		  //   player = new YT.Player('ytplayer', {
+		  //     height: '360',
+		  //     width: '640',
+		  //     videoId: 'M7lc1UVf-VE'
+		  //   });
+		  // }
 		</script>
+        <script>
+          //var audio = document.getElementById("myaudio");
+          //audio.volume = 0.9;
+          // $(document).ready(function() {
+          //     $("#myaudio").get(0).play();
+          // });
+
+            var audio = document.createElement("AUDIO")
+            document.body.appendChild(audio);
+            audio.src = "./assets/audio.m4a"
+
+            document.body.addEventListener("mousemove", function () {
+               var playPromise = audio.play();
+               
+                 if (playPromise !== undefined) {
+                   playPromise.then(_ => {
+                     // Automatic playback started!
+                     // Show playing UI.
+                   })
+                   .catch(error => {
+                     // Auto-play was prevented
+                     // Show paused UI.
+					 
+                      audio.play()
+                   });
+                 }
+                 audio.volume = 0.5;
+            })
+        </script>
 	  </body>
 </html>
