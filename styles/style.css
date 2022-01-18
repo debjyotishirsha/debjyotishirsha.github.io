@@ -68,10 +68,27 @@ video {
     /* text-shadow: 2px 2px #FFCA28; */
 }
 
+.name-sm {
+    font-family: 'The Nautigal', cursive;
+    padding: 3px;
+    font-size: 5vw;
+    color: #F44336 ;
+    z-index: 10;
+    /* text-shadow: 2px 2px #FFCA28; */
+}
+
 .and {
     font-family: 'Imperial Script', cursive;
     font-size: 12vw;
     margin: -20px;
+    color: gold;
+    z-index: 5;
+}
+
+.and-sm {
+    font-family: 'Imperial Script', cursive;
+    font-size: 2vw;
+    margin: -10px;
     color: gold;
     z-index: 5;
 }
@@ -110,10 +127,18 @@ video {
     line-height: 1.5;
 }
 
+.venue {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Imperial Script', cursive;
+    font-size: 4vw;
+    line-height: 1.5;
+}
+
 .thank-you{
     text-align: center;
     font-family: 'Imperial Script', cursive;
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 10px;
 }
 
@@ -157,8 +182,17 @@ video {
         font-size: 18vw;
     }
 
+    .name-sm {
+        font-size: 8vw;
+    }
+
     .and {
         font-size: 12vw;
+        padding: 5px;
+    }
+
+    .and-sm {
+        font-size: 4vw;
         padding: 5px;
     }
 
@@ -176,12 +210,20 @@ video {
     
     .message {
         padding: 30px;
-        font-size: 4vw;
+        font-size: 5vw;
+        line-height: 1.5;
+    }
+    
+    .venue {
+        padding: 10px;
+        text-align: center;
+        font-family: 'Imperial Script', cursive;
+        font-size: 6vw;
         line-height: 1.5;
     }
     
     .thank-you{
-        font-size: 4vw;
+        font-size: 6vw;
         padding: 10px;
     }
 

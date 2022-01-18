@@ -41,7 +41,7 @@
 		<div class="message-page" style="opacity:0.9;">
 			<div class="card">
 				<p class="message" style="opacity:0.9;">
-					With the grace of God, as </p><p class="name" style="font-size:6vw; padding:20px;"> Debjyoti </p> <p class="and" style="font-size:4vw"> &</p> <p class="name" style="font-size:6vw;padding:20px;">Shirsha</p> <p class="message"> join hands and take their marriage vows. It is with deep pleasure and a lot of gratitude that we invite you to their reception ceremony on</p><p class="date-info"><datetime>28th January 2022, 6:30 pm </datetime></p>
+					With the grace of God, as </p><p class="name-sm"> Debjyoti </p> <p class="and-sm"> &</p> <p class="name-sm">Shirsha</p> <p class="message"> join hands and take their marriage vows. It is with deep pleasure and a lot of gratitude that we invite you to their reception ceremony on</p><p class="date-info"><datetime>28th January 2022, 6:30 pm </datetime></p>
 
 			<div class="clock-grid">
                 <p id="date-text">in </p>
@@ -64,8 +64,10 @@
         </div>
 		<div class="message-page">
             <div class="card">
-                <p class="message">
-			Venue:</p></br> <p class="message"  style="font-size:4vw;">Gokul Banquets </p></br> <a class="message" style="font-size:2vw;" href="https://goo.gl/maps/XyEXgBqQBBFs4UEL9" target="_blank">open in map</a><p class="message">441, Sreebhumi, Lake Town, Kolkata, West Bengal 700048 </p>
+                <p class="venue"  style="color:#5436f4;">
+			Venue:</p></br> <p class="name-sm" style="color:#711d8b;">Gokul Banquets </p></br><p class="message">441, Sreebhumi, Lake Town, Kolkata, West Bengal, India, 700048 </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.86105464888!2d88.4041147!3d22.5990947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd72bd046cad8314!2sGokul%20Banquets!5e0!3m2!1sen!2sin!4v1642489949506!5m2!1sen!2sin" width="97%" height="200" style="border:0;padding:15px;border-radius:30px;" allowfullscreen="" loading="lazy"></iframe>
+      <a class="message" href="https://goo.gl/maps/XyEXgBqQBBFs4UEL9" target="_blank" style="text-decoration: none;">Open in maps.</a>
                 <!--<p class="message">Timings - 6:30 pm to 9:30 pm</p>-->
             </div>
 
@@ -84,7 +86,8 @@
             </div> -->
             <p id="final-message"></p>
             <img class="flowers" src="/assets/purple-flower.png">
-		    <p class="thank-you">🌹 Thank you 🌹</p>
+		    <p class="thank-you"> Thank you </p>
+        <!-- <p class="thank-you">🌹 Thank you 🌹</p> -->
         </div>
     </div>
     </div>
@@ -96,52 +99,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
     <script src="/scripts/prettyembed.js"></script>
     <script src="/scripts/video-star.js"></script>
-		<script>
-		  // Load the IFrame Player API code asynchronously.
-		  // var tag = document.createElement('script');
-		  // tag.src = "https://www.youtube.com/player_api";
-		  // var firstScriptTag = document.getElementsByTagName('script')[0];
-		  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    <script>
+      //var audio = document.getElementById("myaudio");
+      //audio.volume = 0.9;
+      // $(document).ready(function() {
+      //     $("#myaudio").get(0).play();
+      // });
 
-		  // Replace the 'ytplayer' element with an <iframe> and
-		  // YouTube player after the API code downloads.
-		  // var player;
-		  // function onYouTubePlayerAPIReady() {
-		  //   player = new YT.Player('ytplayer', {
-		  //     height: '360',
-		  //     width: '640',
-		  //     videoId: 'M7lc1UVf-VE'
-		  //   });
-		  // }
-		</script>
-        <script>
-          //var audio = document.getElementById("myaudio");
-          //audio.volume = 0.9;
-          // $(document).ready(function() {
-          //     $("#myaudio").get(0).play();
-          // });
+        var audio = document.createElement("AUDIO")
+        document.body.appendChild(audio);
+        audio.src = "./assets/audio.m4a"
 
-            var audio = document.createElement("AUDIO")
-            document.body.appendChild(audio);
-            audio.src = "./assets/audio.m4a"
-
-            document.body.addEventListener("mousemove", function () {
-               var playPromise = audio.play();
-               
-                 if (playPromise !== undefined) {
-                   playPromise.then(_ => {
-                     // Automatic playback started!
-                     // Show playing UI.
-                   })
-                   .catch(error => {
-                     // Auto-play was prevented
-                     // Show paused UI.
-					 
-                      audio.play()
-                   });
-                 }
-                 audio.volume = 0.5;
-            })
-        </script>
+        document.body.addEventListener("mousemove", function () {
+            var playPromise = audio.play();
+            
+              if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                  // Automatic playback started!
+                  // Show playing UI.
+                })
+                .catch(error => {
+                  // Auto-play was prevented
+                  // Show paused UI.
+        
+                  // audio.play()
+                });
+              }
+              audio.volume = 0.2;
+        })
+    </script>
 	  </body>
 </html>
