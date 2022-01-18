@@ -127,6 +127,14 @@ video {
     line-height: 1.5;
 }
 
+.message-sm {
+    padding: 2px;
+    text-align: center;
+    font-family: 'Imperial Script', cursive;
+    font-size: 2vw;
+    line-height: 1.2;
+}
+
 .venue {
     padding: 10px;
     text-align: center;
@@ -214,6 +222,14 @@ video {
         line-height: 1.5;
     }
     
+    .message-sm {
+        padding: 5px;
+        text-align: center;
+        font-family: 'Imperial Script', cursive;
+        font-size: 3vw;
+        line-height: 1.2;
+    }
+
     .venue {
         padding: 10px;
         text-align: center;
